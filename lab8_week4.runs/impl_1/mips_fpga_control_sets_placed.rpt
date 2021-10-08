@@ -1,0 +1,179 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Dec 13 23:48:15 2019
+| Host         : LAPTOP-GB9H1AQM running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file mips_fpga_control_sets_placed.rpt
+| Design       : mips_fpga
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   111 |
+| Unused register locations in slices containing registers |   129 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            3 |
+|      4 |            1 |
+|      5 |            1 |
+|      9 |            1 |
+|    16+ |          105 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             396 |          158 |
+| No           | No                    | Yes                    |             100 |           32 |
+| No           | Yes                   | No                     |              43 |           14 |
+| Yes          | No                    | No                     |            1837 |          971 |
+| Yes          | No                    | Yes                    |             995 |          750 |
+| Yes          | Yes                   | No                     |             284 |          151 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------------------+---------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
+|                       Clock Signal                      |                         Enable Signal                         |                       Set/Reset Signal                       | Slice Load Count | Bel Load Count |
++---------------------------------------------------------+---------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
+|  mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[11]_1 |                                                               |                                                              |                1 |              1 |
+| ~mips_top/mips/dp/EXE_to_MEM_pipline/Q[8]               |                                                               | mips_top/mips/dp/EXE_to_MEM_pipline/AS[0]                    |                1 |              1 |
+|  mips_top/address_decoder/RdSel_reg[0]/G0               |                                                               |                                                              |                1 |              1 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/E[0]                      | rst_IBUF                                                     |                1 |              4 |
+|  mips_top/factorial_acc/factor/CU0/control              |                                                               |                                                              |                2 |              5 |
+|  mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[8]_0  |                                                               | mips_top/mips/dp/EXE_to_MEM_pipline/Q[11]                    |                3 |              9 |
+|  clk_IBUF_BUFG                                          |                                                               |                                                              |                9 |             16 |
+|  clk_gen/clk_5KHz_reg_0                                 |                                                               |                                                              |                6 |             19 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__3_1  |                                                              |               18 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__2_8  |                                                              |               18 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/we_regW_reg_2              | rst_IBUF                                                     |               23 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_0         |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_2         |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_3         |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_4         |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_6         |                                                              |               18 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_5         |                                                              |               13 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_7         |                                                              |               15 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_1         |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_rep__1_3  | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_rep__1_2 |               19 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_rep__1_20 |                                                              |               15 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_rep__1_21 |                                                              |               18 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_rep__1_1  | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_rep__1_0 |               20 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[3]_3         |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[3]_4         |                                                              |               20 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[3]_rep__6_1  |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[3]_rep__6_2  |                                                              |               18 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_1  | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_0 |               14 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_56 |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__2_2  |                                                              |               17 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__2_1  | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__2_0 |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__2_3  |                                                              |               19 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_52 |                                                              |               14 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_58 |                                                              |               14 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_59 |                                                              |               20 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_61 |                                                              |               20 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_62 |                                                              |               20 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_54 |                                                              |               18 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_55 |                                                              |               17 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_57 |                                                              |               14 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_60 |                                                              |               20 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__1_12 |                                                              |               19 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__0_53 |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__3_0  |                                                              |               17 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[6]_6         |                                                              |               17 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[5]_rep_0     |                                                              |               12 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__2_6  |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[6]_7         |                                                              |               23 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_14        |                                                              |               14 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_10        |                                                              |               14 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__2_4  |                                                              |               17 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[5]_rep__0_2  |                                                              |               19 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_3         | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_2        |               14 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_5         | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_4        |               20 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_8         |                                                              |               13 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[5]_rep_1     |                                                              |               17 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__2_7  |                                                              |               20 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[6]_4         |                                                              |               13 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_12        |                                                              |               14 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_7         | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_6        |               20 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[5]_rep__0_1  |                                                              |               20 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[6]_0         |                                                              |               13 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[6]_3         |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_11        |                                                              |               15 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[6]_2         |                                                              |               20 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[6]_1         |                                                              |               19 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_1         | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_0        |               18 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[5]_rep__0_0  |                                                              |               22 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_13        |                                                              |               17 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_15        |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[4]_rep__2_5  |                                                              |               15 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[6]_5         |                                                              |               16 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[7]_9         |                                                              |               15 |             31 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[2]_4[0]         | rst_IBUF                                                     |               25 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[2]_2[0]         | rst_IBUF                                                     |               26 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[3]_2[0]         | rst_IBUF                                                     |               27 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[2]_8[0]      |                                                              |               11 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[0]_1[0]         | rst_IBUF                                                     |               19 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/E[0]                       | rst_IBUF                                                     |               24 |             32 |
+|  clk_pb_BUFG                                            | mips_top/factorial_acc/factor/CU0/FSM_onehot_CS_reg[1]_0[1]   |                                                              |                6 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[3]_4[0]         | rst_IBUF                                                     |               27 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[2]_3[0]         | rst_IBUF                                                     |               23 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[4]_1[0]         | rst_IBUF                                                     |               20 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[2]_0[0]         | rst_IBUF                                                     |               25 |             32 |
+|  n_0_1718_BUFG                                          |                                                               |                                                              |               13 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[3]_3[0]         | rst_IBUF                                                     |               21 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/we_regW_reg_1[0]           | rst_IBUF                                                     |               28 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/we_regW_reg_3[0]           | rst_IBUF                                                     |               24 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[1]_0[0]         | rst_IBUF                                                     |               23 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[3]_5[0]         | rst_IBUF                                                     |               27 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[0]_0[0]         | rst_IBUF                                                     |               26 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[2]_9[0]         | rst_IBUF                                                     |               23 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[0]_2[0]         | rst_IBUF                                                     |               27 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[3]_0[0]         | rst_IBUF                                                     |               26 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[1]_2[0]         | rst_IBUF                                                     |               24 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[2]_6[0]         | rst_IBUF                                                     |               26 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[2]_7[0]         | rst_IBUF                                                     |               22 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[2]_8[0]         | rst_IBUF                                                     |               25 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[1]_1[0]         | rst_IBUF                                                     |               21 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[2]_5[0]         | rst_IBUF                                                     |               22 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[3]_1[0]         | rst_IBUF                                                     |               22 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[4]_0[0]         | rst_IBUF                                                     |               25 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/we_regW_reg_0[0]           | rst_IBUF                                                     |               23 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/we_regW_reg_4[0]           | rst_IBUF                                                     |               25 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[2]_1[0]         | rst_IBUF                                                     |               25 |             32 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/MEM_to_WB_pipline/rf_waW_reg[0]_3[0]         | rst_IBUF                                                     |               25 |             32 |
+|  clk_IBUF_BUFG                                          |                                                               | rst_IBUF                                                     |               10 |             33 |
+|  clk_pb_BUFG                                            | mips_top/factorial_acc/factor/CU0/FSM_onehot_CS_reg[1]_0[3]   | rst_IBUF                                                     |               10 |             36 |
+|  clk_pb_BUFG                                            | mips_top/mips/dp/EXE_to_MEM_pipline/alu_outM_reg[3]_5[0]      |                                                              |               15 |             37 |
+|  clk_pb_BUFG                                            |                                                               | rst_IBUF                                                     |               32 |            100 |
+|  clk_pb_BUFG                                            |                                                               |                                                              |              126 |            326 |
++---------------------------------------------------------+---------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
+
+
